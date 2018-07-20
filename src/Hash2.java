@@ -1,8 +1,5 @@
 import java.util.HashSet;
 
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
 
 /**
  * Write an efficient method that checks whether any permutation ↴ of an input

@@ -4,10 +4,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
-
 /**
  * Meetings question
  * 

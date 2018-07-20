@@ -13,10 +13,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
-
 /**
  * You left your computer unlocked and your friend decided to troll you by
  * copying a lot of your files to random spots all over your file system.

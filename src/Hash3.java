@@ -1,8 +1,5 @@
 import java.util.HashMap;
 
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
 
 /**
  * You want to build a word cloud, an infographic where the size of a word

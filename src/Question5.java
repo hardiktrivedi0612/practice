@@ -2,9 +2,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
 
 /**
  * @author hatrivedi

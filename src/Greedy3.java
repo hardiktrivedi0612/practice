@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
 
 /**
  * You have an array of integers, and for each index you want to find the

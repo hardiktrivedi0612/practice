@@ -1,9 +1,5 @@
 import java.util.Arrays;
 
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
-
 /**
  * In order to win the prize for most cookies sold, my friend Alice and I are
  * going to merge our Girl Scout Cookies orders and enter as one unit.

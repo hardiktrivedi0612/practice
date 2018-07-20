@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
 
 /**
  * Write a method that takes an array of characters and reverses the letters

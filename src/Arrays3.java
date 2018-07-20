@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
 
 /**
  * You're working on a secret team solving coded transmissions.

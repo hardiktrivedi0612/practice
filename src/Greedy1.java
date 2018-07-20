@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
 
 /**
  * Writing programming interview questions hasn't made me rich yet ... so I
