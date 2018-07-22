@@ -1,4 +1,6 @@
 package com.trivedi.hardik.interviewcake;
+
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class BFS {
@@ -18,11 +20,23 @@ public class BFS {
 		adj[v].add(w);
 	}
 
-	public void BFS(int startNode) {
-		boolean[] visited = new boolean[v];
+	public void performBFS(int s) {
+		boolean[] visited = new boolean[V];
 		LinkedList<Integer> queue = new LinkedList<>();
-		visited[startNode] = true;
-		queue.add(startNode);
+		visited[s] = true;
+		queue.add(s);
+		while (queue.size() != 0) {
+			s = queue.poll();// Remove from the head of the queue
+			System.out.print(s + " ");
+			Iterator<Integer> iter = adj[s].iterator();
+			while (iter.hasNext()) {
+				int n = iter.next();
+				if (!visited[n]) {
+					visited[n] = true;
+					queue.add(n); // Add to the rear of the queue
+				}
+			}
+		}
 	}
 
 	public static void main(String[] args) {
@@ -37,7 +51,7 @@ public class BFS {
 
 		System.out.println("Following is Breadth First Traversal " + "(starting from vertex 2)");
 
-		g.BFS(2);
+		g.performBFS(2);
 	}
 
 }
