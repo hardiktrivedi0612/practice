@@ -30,7 +30,8 @@ import org.junit.runner.notification.Failure;
  */
 public class FindDuplicatesSpaceEdition {
 
-	public static int findRepeat(int[] theArray) {
+	// This is the O(nlgn) solution
+	public static int findRepeatNLgN(int[] theArray) {
 		int floor = 1;
 		int ceiling = theArray.length - 1;
 		while (floor < ceiling) {
@@ -58,6 +59,43 @@ public class FindDuplicatesSpaceEdition {
 			}
 		}
 		return floor;
+	}
+
+	// This is the O(n) solution
+	public static int findRepeat(int[] theArray) {
+		int n = theArray.length - 1;
+
+		int positionInCycle = n + 1;
+		for (int i = 0; i < n; i++) {
+			positionInCycle = theArray[positionInCycle - 1];
+		}
+
+		// We are at the nth position
+		// Remember this position
+		int positionToRemember = positionInCycle;
+
+		int currentPositionInCycle = theArray[positionInCycle - 1];
+
+		int cycleStepCount = 1;
+
+		while (currentPositionInCycle != positionToRemember) {
+			currentPositionInCycle = theArray[currentPositionInCycle - 1];
+			cycleStepCount++;
+		}
+
+		// We have the length of the cycle
+		int headPointer = n + 1;
+		int pointerStart = n + 1;
+		for (int i = 0; i < cycleStepCount; i++) {
+			pointerStart = theArray[pointerStart - 1];
+		}
+
+		while (pointerStart != headPointer) {
+			pointerStart = theArray[pointerStart - 1];
+			headPointer = theArray[headPointer - 1];
+		}
+
+		return pointerStart;
 	}
 
 	// tests
