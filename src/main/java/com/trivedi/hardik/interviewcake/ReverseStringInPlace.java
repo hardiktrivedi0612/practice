@@ -8,7 +8,7 @@ package com.trivedi.hardik.interviewcake;
  * @date Jun 10, 2018
  * @since 2.5
  */
-public class Arrays2 {
+public class ReverseStringInPlace {
 
 	/**
 	 * @author hatrivedi

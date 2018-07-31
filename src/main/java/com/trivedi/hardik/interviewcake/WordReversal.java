@@ -15,7 +15,7 @@ package com.trivedi.hardik.interviewcake;
  * @date Jun 10, 2018
  * @since 2.5
  */
-public class Arrays3 {
+public class WordReversal {
 	public static void main(String args[]) {
 		char[] message = { 'c', 'a', 'k', 'e', ' ', 'p', 'o', 'u', 'n', 'd', ' ', 's', 't', 'e', 'a', 'l' };
 		reverseWords(message);
@@ -33,7 +33,7 @@ public class Arrays3 {
 		int left = 0;
 		int spaceIndex = 0;
 		while (left <= message.length) {
-			if (left == message.length || message[left] == ' ' ) {
+			if (left == message.length || message[left] == ' ') {
 				reverseWord(message, spaceIndex, left - 1);
 				spaceIndex = left + 1;
 			}
