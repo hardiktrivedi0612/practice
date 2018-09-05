@@ -31,6 +31,17 @@ public class SegmentTree {
 
 		// Find sum after the value is updated
 		System.out.println("Updated sum of values in given range = " + tree.getSum(n, 1, 3));
+
+		SegmentTreeSet2 tree2 = new SegmentTree().new SegmentTreeSet2();
+
+		// Build segment tree from given array
+		tree2.constructSegmentTree(arr, n);
+
+		int qs = 1; // Starting index of query range
+		int qe = 5; // Ending index of query range
+
+		// Print minimum value in arr[qs..qe]
+		System.out.println("Minimum of values in range [" + qs + ", " + qe + "] is = " + tree2.rmq(n, qs, qe));
 	}
 
 	/**
@@ -104,6 +115,67 @@ public class SegmentTree {
 					+ getSumUtil(mid + 1, endIndex, queryStart, queryEnd, 2 * currentIndex + 2);
 		}
 
+	}
+
+	/**
+	 * 
+	 * https://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/
+	 * 
+	 * Set 2 - Range minimum query
+	 * 
+	 * @author hardik
+	 *
+	 */
+	class SegmentTreeSet2 {
+		int segmentTree[];
+
+		public SegmentTreeSet2() {
+		}
+
+		void constructSegmentTree(int arr[], int n) {
+			int heightOfSegmentTree = (int) Math.ceil(Math.log(n) / Math.log(2));
+			int sizeOfSegmentTree = 2 * (int) Math.pow(2, heightOfSegmentTree) - 1;
+			segmentTree = new int[sizeOfSegmentTree];
+			constructSegmentTreeUtil(arr, 0, n - 1, 0);
+		}
+
+		int constructSegmentTreeUtil(int[] arr, int startIndex, int endIndex, int currentIndex) {
+			if (startIndex == endIndex) {
+				segmentTree[currentIndex] = arr[startIndex];
+				return arr[startIndex];
+			}
+			int mid = getMid(startIndex, endIndex);
+			segmentTree[currentIndex] = minVal(constructSegmentTreeUtil(arr, startIndex, mid, currentIndex * 2 + 1),
+					constructSegmentTreeUtil(arr, mid + 1, endIndex, currentIndex * 2 + 2));
+			return segmentTree[currentIndex];
+		}
+
+		int minVal(int x, int y) {
+			return Math.min(x, y);
+		}
+
+		int getMid(int startIndex, int endIndex) {
+			return startIndex + (endIndex - startIndex) / 2;
+		}
+
+		int rmq(int n, int queryStart, int queryEnd) {
+			if (queryStart < 0 || queryEnd > n - 1 || queryStart > queryEnd) {
+				throw new IllegalArgumentException("Illegal values in input");
+			}
+			return rmqUtil(0, n - 1, queryStart, queryEnd, 0);
+		}
+
+		int rmqUtil(int startIndex, int endIndex, int queryStart, int queryEnd, int currentIndex) {
+			if (queryStart <= startIndex && queryEnd >= endIndex) {
+				return segmentTree[currentIndex];
+			}
+			if (endIndex < queryStart || startIndex > queryEnd) {
+				return Integer.MAX_VALUE;
+			}
+			int mid = getMid(startIndex, endIndex);
+			return minVal(rmqUtil(startIndex, mid, queryStart, queryEnd, 2 * currentIndex + 1),
+					rmqUtil(mid + 1, endIndex, queryStart, queryEnd, 2 * currentIndex + 2));
+		}
 	}
 
 }
