@@ -7,6 +7,10 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
+/**
+ * Write a method to find the 2nd largest element in a binary search tree. ↴
+ *
+ */
 public class BinarySearchTree2ndLargest {
 
 	public static class BinaryTreeNode {
@@ -44,7 +48,7 @@ public class BinarySearchTree2ndLargest {
 			if (current.right != null && current.right.left == null && current.right.right == null) {
 				return current.value;
 			}
-			
+
 			current = current.right;
 		}
 	}

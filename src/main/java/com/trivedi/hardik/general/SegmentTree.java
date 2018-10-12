@@ -149,9 +149,9 @@ public class SegmentTree {
 					constructSegmentTreeUtil(arr, mid + 1, endIndex, currentIndex * 2 + 2));
 			return segmentTree[currentIndex];
 		}
-
+ 
 		int minVal(int x, int y) {
-			return Math.min(x, y);
+			return Math.min(x, y);	
 		}
 
 		int getMid(int startIndex, int endIndex) {

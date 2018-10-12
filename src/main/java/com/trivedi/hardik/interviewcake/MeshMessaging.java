@@ -19,6 +19,25 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
+/**
+ * You wrote a trendy new messaging app, MeshMessage, to get around flaky cell
+ * phone coverage.
+ * 
+ * Instead of routing texts through cell towers, your app sends messages via the
+ * phones of nearby users, passing each message along from one phone to the next
+ * until it reaches the intended recipient. (Don't worry—the messages are
+ * encrypted while they're in transit.)
+ * 
+ * Some friends have been using your service, and they're complaining that it
+ * takes a long time for messages to get delivered. After some preliminary
+ * debugging, you suspect messages might not be taking the most direct route
+ * from the sender to the recipient.
+ * 
+ * Given information about active users on the network, find the shortest route
+ * for a message from one user (the sender) to another (the recipient). Return
+ * an array of users that make up this route
+ *
+ */
 public class MeshMessaging {
 
 	public static String[] getPath(Map<String, String[]> graph, String startNode, String endNode) {
@@ -31,16 +50,15 @@ public class MeshMessaging {
 
 		Set<String> nodesAlreadySeen = new HashSet<String>();
 		nodesAlreadySeen.add(startNode);
-		
+
 		Map<String, String> parents = new HashMap<>();
 
 		Deque<String> queue = new ArrayDeque<>();
 		queue.addLast(startNode);
-		
-		
+
 		while (!queue.isEmpty()) {
 			String node = queue.pollFirst();
-			if(node.equals(endNode)) {
+			if (node.equals(endNode)) {
 				break;
 			}
 			for (String neighbor : graph.get(node)) {
