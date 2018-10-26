@@ -4,9 +4,6 @@
 package com.trivedi.hardik.leetcode.dfs;
 
 import java.util.HashMap;
-import java.util.List;
-
-import com.trivedi.hardik.leetcode.dfs.SameTree.TreeNode;
 
 /**
  * @author hatrivedi
@@ -25,6 +22,7 @@ public class ContructBinaryTreeFromPreOrderAndInOrder {
 		}
 	}
 
+	// To not use map as a global variable. Instead pass it to methods
 	HashMap<Integer, Integer> map = new HashMap<>();
 
 	public TreeNode buildTree(int[] preorder, int[] inorder) {
@@ -49,7 +47,8 @@ public class ContructBinaryTreeFromPreOrderAndInOrder {
 		int inOrderIndex = this.map.get(root.val);
 
 		root.left = buildTree(preOrderIndex + 1, inOrderStartIndex, inOrderIndex - 1, preorder, inorder);
-		root.right = buildTree(preOrderIndex + inOrderIndex - inOrderStartIndex + 1, inOrderIndex + 1, inOrderEndIndex, preorder, inorder);
+		root.right = buildTree(preOrderIndex + inOrderIndex - inOrderStartIndex + 1, inOrderIndex + 1, inOrderEndIndex,
+				preorder, inorder);
 
 		return root;
 
