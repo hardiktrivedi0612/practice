@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2018 Copart, Inc. All rights reserved.
- */
 package com.trivedi.hardik.leetcode.dfs;
 
 import java.util.HashMap;
