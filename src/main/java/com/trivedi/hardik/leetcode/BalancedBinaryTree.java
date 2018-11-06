@@ -1,4 +1,4 @@
-package com.trivedi.hardik.leetcode.dfs;
+package com.trivedi.hardik.leetcode;
 
 /**
  * @author hatrivedi

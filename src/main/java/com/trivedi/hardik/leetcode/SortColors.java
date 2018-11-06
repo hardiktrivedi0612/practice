@@ -1,4 +1,4 @@
-package com.trivedi.hardik.leetcode.arrays;
+package com.trivedi.hardik.leetcode;
 
 import java.util.Map;
 import java.util.TreeMap;

@@ -1,4 +1,4 @@
-package com.trivedi.hardik.leetcode.dfs;
+package com.trivedi.hardik.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;

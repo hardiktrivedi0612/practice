@@ -1,6 +1,4 @@
-package com.trivedi.hardik.leetcode.dfs;
-
-import com.trivedi.hardik.leetcode.TreeNode;
+package com.trivedi.hardik.leetcode;
 
 /**
  * @author hatrivedi

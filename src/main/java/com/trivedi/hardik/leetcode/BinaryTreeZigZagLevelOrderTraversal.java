@@ -1,9 +1,7 @@
-package com.trivedi.hardik.leetcode.bfs;
+package com.trivedi.hardik.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.trivedi.hardik.leetcode.TreeNode;
 
 /**
  * @author hatrivedi
