@@ -1,4 +1,4 @@
-package com.trivedi.hardik.interviewcake;
+package com.trivedi.hardik.general;
 
 public class BinarySearch {
 
