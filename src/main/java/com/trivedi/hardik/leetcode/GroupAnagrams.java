@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
+ * Given an array of strings, group anagrams together.
+ * 
  * @author hatrivedi
  * @date Oct 23, 2018
  * @since 2.5

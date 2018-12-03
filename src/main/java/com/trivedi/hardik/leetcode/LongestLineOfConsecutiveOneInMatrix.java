@@ -1,6 +1,9 @@
 package com.trivedi.hardik.leetcode;
 
 /**
+ * Given a 01 matrix M, find the longest line of consecutive one in the matrix.
+ * The line could be horizontal, vertical, diagonal or anti-diagonal.
+ * 
  * @author hatrivedi
  * @date Nov 15, 2018
  * @since 2.5

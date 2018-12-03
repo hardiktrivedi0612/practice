@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Given a string s , find the length of the longest substring t that contains
+ * at most 2 distinct characters.
+ * 
  * @author hatrivedi
  * @date Nov 13, 2018
  * @since 2.5

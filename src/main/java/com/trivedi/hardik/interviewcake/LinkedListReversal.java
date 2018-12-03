@@ -39,6 +39,22 @@ public class LinkedListReversal {
 		return current;
 	}
 
+	public static LinkedListNode reverse1(LinkedListNode headOfList) {
+		// reverse the linked list in place
+		if (headOfList == null) {
+			return null;
+		}
+		LinkedListNode prev = null;
+		LinkedListNode curr = headOfList;
+		while (headOfList != null) {
+			LinkedListNode temp = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = temp;
+		}
+		return prev;
+	}
+
 	// tests
 
 	@Test
