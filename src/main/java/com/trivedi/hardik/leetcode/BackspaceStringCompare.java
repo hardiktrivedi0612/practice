@@ -1,6 +1,9 @@
 package com.trivedi.hardik.leetcode;
 
 /**
+ * Given two strings S and T, return if they are equal when both are typed into
+ * empty text editors. # means a backspace character.
+ * 
  * @author hatrivedi
  * @date Nov 14, 2018
  * @since 2.5

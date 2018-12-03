@@ -3,6 +3,11 @@ package com.trivedi.hardik.leetcode;
 import java.util.Stack;
 
 /**
+ * You are given two non-empty linked lists representing two non-negative
+ * integers. The most significant digit comes first and each of their nodes
+ * contain a single digit. Add the two numbers and return it as a linked list.
+ * 
+ * 
  * @author hatrivedi
  * @date Nov 30, 2018
  * @since 2.5

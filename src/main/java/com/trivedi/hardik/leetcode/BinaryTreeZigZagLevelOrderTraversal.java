@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Given a binary tree, return the zigzag level order traversal of its nodes'
+ * values. (ie, from left to right, then right to left for the next level and
+ * alternate between).
+ * 
  * @author hatrivedi
  * @date Oct 27, 2018
  * @since 2.5
