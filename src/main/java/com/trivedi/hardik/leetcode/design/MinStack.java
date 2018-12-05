@@ -1,4 +1,4 @@
-package com.trivedi.hardik.leetcode;
+package com.trivedi.hardik.leetcode.design;
 
 import java.util.Stack;
 
