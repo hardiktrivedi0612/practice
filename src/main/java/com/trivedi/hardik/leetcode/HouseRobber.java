@@ -35,4 +35,20 @@ public class HouseRobber {
 		}
 		return rob[nums.length - 1];
 	}
+
+	// Another solution that is used in later questions
+	public int rob1(int[] nums) {
+		if (nums.length == 0) {
+			return 0;
+		}
+		int prevMax = 0;
+		int currMax = 0;
+		for (int num : nums) {
+			int temp = currMax;
+			currMax = Math.max(prevMax + num, currMax);
+			prevMax = temp;
+		}
+		return currMax;
+	}
+
 }
