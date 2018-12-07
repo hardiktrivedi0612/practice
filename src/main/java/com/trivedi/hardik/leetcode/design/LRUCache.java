@@ -1,6 +1,6 @@
 package com.trivedi.hardik.leetcode.design;
 
-import java.util.Hashtable;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Design and implement a data structure for Least Recently Used (LRU) cache. It
@@ -20,7 +20,7 @@ import java.util.Hashtable;
  */
 public class LRUCache {
 
-	Hashtable<Integer, DLinkedNode> cache = new Hashtable<>();
+	ConcurrentHashMap<Integer, DLinkedNode> cache = new ConcurrentHashMap<>();
 	private DLinkedNode head, tail;
 	int count;
 	int capacity;
