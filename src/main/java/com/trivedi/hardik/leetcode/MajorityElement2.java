@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Given an integer array of size n, find all elements that appear more than ⌊
+ * n/3 ⌋ times.
+ * 
+ * Note: The algorithm should run in linear time and in O(1) space.
+ * 
  * @author hatrivedi
  * @date Nov 7, 2018
  * @since 2.5
