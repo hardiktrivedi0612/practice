@@ -43,6 +43,8 @@ public class ThreeSum {
 		Arrays.sort(nums);
 		List<List<Integer>> response = new ArrayList<>();
 		for (int i = 0; i < nums.length - 1; i++) {
+
+			// Done to ignore duplicates
 			if (i > 0 && nums[i] == nums[i - 1]) {
 				continue;
 			}
@@ -53,6 +55,8 @@ public class ThreeSum {
 				if (sum == 0) {
 					response.add(Arrays.asList(nums[i], nums[l], nums[r]));
 					int leftNum = nums[l], rightNum = nums[r];
+
+					// Done to ignore duplicates
 					while (l < r && leftNum == nums[l]) {
 						l++;
 					}
