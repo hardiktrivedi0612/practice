@@ -1,4 +1,4 @@
-package com.trivedi.hardik.leetcode;
+package com.trivedi.hardik.leetcode.design;
 
 /**
  * Design a HashMap without using any built-in hash table libraries.
