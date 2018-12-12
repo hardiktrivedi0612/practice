@@ -15,13 +15,13 @@ package com.trivedi.hardik.leetcode.design;
  * @date Dec 3, 2018
  * @since 2.5
  */
-public class MyHashMap {
+public class HashMap {
 
 	private Entry[] entries;
 	private int MAP_SIZE;
 
 	/** Initialize your data structure here. */
-	public MyHashMap() {
+	public HashMap() {
 		this.entries = new Entry[1000000];
 		this.MAP_SIZE = 1000000;
 	}
