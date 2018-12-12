@@ -6,6 +6,10 @@ import java.util.List;
 /**
  * Given a collection of distinct integers, return all possible permutations.
  * 
+ * READ:
+ * 
+ * https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+ * 
  * @author hatrivedi
  * @date Dec 11, 2018
  * @since 2.5
@@ -30,4 +34,5 @@ public class Permutations {
 			}
 		}
 	}
+
 }
