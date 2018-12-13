@@ -1,6 +1,12 @@
 package com.trivedi.hardik.leetcode;
 
 /**
+ * Write an efficient algorithm that searches for a value in an m x n matrix.
+ * This matrix has the following properties:
+ * 
+ * Integers in each row are sorted in ascending from left to right. Integers in
+ * each column are sorted in ascending from top to bottom
+ * 
  * @author hatrivedi
  * @date Oct 23, 2018
  * @since 2.5

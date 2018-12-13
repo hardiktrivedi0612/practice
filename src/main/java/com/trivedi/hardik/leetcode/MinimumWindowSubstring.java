@@ -1,6 +1,9 @@
 package com.trivedi.hardik.leetcode;
 
 /**
+ * Given a string S and a string T, find the minimum window in S which will
+ * contain all the characters in T in complexity O(n).
+ * 
  * @author hatrivedi
  * @date Nov 13, 2018
  * @since 2.5

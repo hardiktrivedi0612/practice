@@ -1,6 +1,8 @@
 package com.trivedi.hardik.leetcode;
 
 /**
+ * Given a binary tree, flatten it to a linked list in-place.
+ * 
  * @author hatrivedi
  * @date Dec 4, 2018
  * @since 2.5

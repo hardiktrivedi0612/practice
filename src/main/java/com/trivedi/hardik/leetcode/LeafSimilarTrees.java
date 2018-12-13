@@ -18,17 +18,6 @@ import java.util.List;
  * @since 2.5
  */
 public class LeafSimilarTrees {
-
-	class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
-
 	public boolean leafSimilar(TreeNode root1, TreeNode root2) {
 		return getLeafSequence(root1, new ArrayList<Integer>())
 				.equals(getLeafSequence(root2, new ArrayList<Integer>()));

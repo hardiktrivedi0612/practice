@@ -3,6 +3,11 @@ package com.trivedi.hardik.leetcode;
 import java.util.HashMap;
 
 /**
+ * Given a m x n grid filled with non-negative numbers, find a path from top
+ * left to bottom right which minimizes the sum of all numbers along its path.
+ * 
+ * Note: You can only move either down or right at any point in time.
+ * 
  * @author hatrivedi
  * @date Oct 23, 2018
  * @since 2.5
@@ -33,11 +38,6 @@ public class MinimumPathSum {
 		this.map.put(i + "-" + j, grid[i][j] + Math.min(rightMinSum, bottomMinSum));
 		return grid[i][j] + Math.min(rightMinSum, bottomMinSum);
 	}
-	
-	
-	
-	
-	
 
 	// Solution 2
 	public int minPathSum2(int[][] grid) {
